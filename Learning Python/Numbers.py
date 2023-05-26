@@ -18,6 +18,11 @@ print(f)
 
 # have assigned variables to perform some basic arithimetic functions
 
+g= 4**2 #squre of 4 
+print(g)
 
+h= 4 + 2 * 3 + 6 # follow BODMAS to complete arithemtic operation 
+print(h)
 
-
+i = (4+2) - (3+6) #using BODMAS see how the function works 
+print(i)
