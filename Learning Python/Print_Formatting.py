@@ -35,3 +35,17 @@ print("product: %s ,  Quantity: %5.2f , price: %1.0f, Taste: %r " %('Apple', 5.4
 #Using String Formatting 
 print("an example of string  {} is to use format {}".format('formatting', 'method'))
 
+print( '{2} {1} {0}'.format('Language', 'Programming', 'Python '))
+
+print("Sheliza %s is Taha %s wife" %("Merchant", "Merchant")) #placeholders can do the same thing but can get duplication
+
+print("Sheliza {p} is Taha {p} wife".format(p='Merchant')) #can avoid duplication using format method
+
+
+#will try another way to format string using fstring formatting 
+
+name='Taha'
+
+print(f'he said his name is {name}. ')
+
+print(f'he said his name is {name!r}') #can get string representation 
