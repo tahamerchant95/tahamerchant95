@@ -47,3 +47,4 @@ print(b['k1']['k2']['k3'])
 
 print(first_dict.keys()) # call out all keys 
 print(first_dict.values()) #call out all values 
+print(len(first_dict)) #can check length of dictionary 
