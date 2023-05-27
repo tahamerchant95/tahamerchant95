@@ -37,9 +37,9 @@ print("an example of string  {} is to use format {}".format('formatting', 'metho
 
 print( '{2} {1} {0}'.format('Language', 'Programming', 'Python '))
 
-print("Sheliza %s is Taha %s wife" %("Merchant", "Merchant")) #placeholders can do the same thing but can get duplication
+print("Karachi is a %s in Pakistan, Hyderabad is also a %s in Pakistan" %("city", "city")) #placeholders can do the same thing but can get duplication
 
-print("Sheliza {p} is Taha {p} wife".format(p='Merchant')) #can avoid duplication using format method
+print("Karachi is a {c} in Pakistan, Hyderabad is also a {c} in Pakistan".format(c='city')) #can avoid duplication using format method
 
 
 #will try another way to format string using fstring formatting 
