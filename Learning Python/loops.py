@@ -95,4 +95,28 @@ print(list(dict_1.keys())) #casting list to get keys
 # dictionaries are unorderedd so will need to use sort function 
 
 
+# A while loop will keep on executing a condition till it becomes true
+# can add else condition until condition is true with the while loop in play 
+# break: using this will break out of current loop 
+# continue: will continue executing if condition is met 
+# pass: wont do anything 
+
+y= 0 
+
+while y < 5:
+    print('y is currently', y)
+    print(' y is still less than 5, adding 1 to y')
+    y += 1
+
+    if y == 1 : 
+        print("y is still at 1") 
+    elif y == 2:
+        print("y is still at 2 ")
+    elif y == 3:
+        print("y == 3, time to break the loop")
+        break #breaking the loop since condition is met 
+    else:
+        print("continuing loop")
+        continue
+
 
