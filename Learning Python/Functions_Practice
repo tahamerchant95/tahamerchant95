@@ -1,0 +1,46 @@
+def lesser_of_two_evens(a,b):
+    if a % 2 == 0 and b % 2 == 0:
+        return min(a,b)
+    else:
+        return max(a,b)
+    
+a= lesser_of_two_evens(2,5)
+print(a)
+
+
+def animal_cracker(text):
+    words= text.split()
+    return words[0][0] == words[1][0]
+
+b= animal_cracker('LevelHeaded Llama')
+print(b)
+
+
+def makes_twenty(n1,n2):
+    if n1 + n2 == 20 or n1 == 20 or n2 == 20 :
+        return True
+    else:
+        pass
+
+    return False
+
+c= makes_twenty(10,10)
+d= makes_twenty(5,6)
+print(d)
+print(c)
+
+
+def old_macdonald(name):
+    if len(name) > 3 :
+        return name[:3].capitalize() + name[3:].capitalize()
+    else:
+        return 'name is too short'
+
+d= old_macdonald('macdonald')
+print(d)
+
+def master_yoda(text):
+    return ''.join(text.split()[::-1])
+
+e= master_yoda('name is taha')
+print(e)
