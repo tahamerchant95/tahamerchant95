@@ -2,8 +2,7 @@ from random import randint
 
 var1= randint(1,100)
 
-guesses= [0]
-
+guesses=[]
 
 print("Welcome to our number guessing game")
 
