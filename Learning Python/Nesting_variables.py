@@ -39,3 +39,34 @@ def enc_func():
     enc_func1()
 
 print(enc_func())
+
+y = 10 
+
+def loc_func(y):
+    print("y right now is:" , y ) 
+
+    y = 3 # variable name is local to a function sicne it doesnt have any enclosing functions
+    print("changed value of y:", y)
+
+loc_func(y)
+print('y is still:', y)
+
+
+y = 10
+
+def glob_func():
+    global y 
+
+    print("have assingned y a global variable so y is:" , y)
+    print(" you can see global variable value is:" , y)
+    y = 5 # assigning a variable local to function but will change to global 
+
+    print("Before running function variable should have value:", y) # here we see variable assigned value 5 since is local 
+    
+glob_func()
+print("Value of y after running func is:" , y)
+print(globals()) # can check global values
+print(locals()) # can check local values 
+
+
+
