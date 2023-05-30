@@ -28,7 +28,7 @@ print(user_choice())
 '''
 # need to valid user input
 # such as checking whether the input is a digit or not 
-
+'''
 def chk_choice():
     choice ='Wrong'
 
@@ -50,3 +50,64 @@ def chk_choice():
 
 
 print(chk_choice())
+
+'''
+
+game_list = [0,1,2]
+def display_game(game_list):
+    print("Here is the current list")
+    print(game_list)
+
+
+def user_pos():
+
+    choice = 'Wrong'
+
+    while choice not in ['0', '1' , '2'] : 
+        choice=input(("Please pick position to replace (0,1,2): "))
+
+        if choice not in ['0', '1', '2']:
+            print("Sorry but you didnt enter any position")
+
+    return int(choice)
+
+
+def replace_choice(game_lst, position):
+    user_placement= input("Type a string to place at position")
+
+    game_lst[position] = user_placement
+
+    return game_lst
+
+def gameon_choice():
+
+    choice= 'Wrong'
+
+    while choice not in ['Y', 'N']:
+        choice = input("Would you like to continue more? ")
+
+        if choice not in ['Y', 'N']:
+            print("You did not enter right choice")
+
+    if choice == 'Y':
+        return True
+    else:
+        return False
+    
+
+game_on= True
+
+game_list= [0,1,2]
+
+
+while game_on:
+    display_game(game_list)
+
+    position= user_pos()
+
+    game_list= replace_choice(game_list,position)
+
+    display_game(game_list)
+
+    game_on = gameon_choice()
+
