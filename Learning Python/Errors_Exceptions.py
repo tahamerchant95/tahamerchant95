@@ -10,6 +10,8 @@
 
 # finally keyword will allow to run the code even if exception is raised
 
+
+
 try:
     f = open("examplefile", 'w')
     f.write("testing.... ")
