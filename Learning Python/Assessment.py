@@ -1,4 +1,4 @@
-# first exercise is to print only words that start with s 
+# first exercise is to print only words that start with s
 
 st = 'Print only the words that start with s in this sentence'
 
