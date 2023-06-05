@@ -116,12 +116,51 @@ print('Day', current.day)
 # above are print statements of todays time and date values
 
 
+# will demonstrate how to work with numbers
+
+import math
+
+val= 4.25
+
+print(math.floor(val))
+print(math.ceil(val))
+print(round(val))
+
+''' below statements are all math constants where values of such constants are fixed 
+print(math.pi)
+print(math.e)
+print(math.tau)
+print(math.inf)
+print(math.nan)
+'''
 
 
 
+# seeding allows to generate the same random numbers in series 
+
+import random
+
+print(random.randint(0,100))
+
+print(random.seed(101))
 
 
+lst= list(range(0,10))
+print(lst)
 
+# sample size allows to pick element more than once
 
+x=random.choices(population= lst, k=10)
+print(x)
 
+y= random.sample(population=lst, k = 10) # setting sample size k = 10
+print(y)
 
+z = random.shuffle(lst) #shuffling list
+print(z)
+
+a=random.uniform(a=10.5, b= 12.5) # uniform distribution
+print(a)
+
+b= random.gauss(mu= 20.3, sigma=1) # normal, gaussian distribution 
+print(b)
