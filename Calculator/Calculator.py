@@ -72,7 +72,7 @@ while True:
         print("Invalid input")
 
     try:
-        if choices in (1, 2, 3, 4):
+        if choices in (1, 2, 3, 4, 7):
             num1= float(input("Enter first %s:"%("number")))
             num2= float(input("Enter second %s:"%("number")))
 
@@ -108,9 +108,7 @@ while True:
         print(angle)
 
     elif choices == 7:
-        user_num1= float(input("Enter number1 to get %s:"%("exponent")))
-        user_num2= float(input("Enter number2 to get %s: "%("exponent")))
-        exp= exponent(user_num1,user_num2)
+        exp= exponent(num1,num2)
         print(exp)
 
 
