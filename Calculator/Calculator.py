@@ -20,6 +20,9 @@
 # first lets print out our choices to ask user 
 
 # we can create functions for each operation
+# we import the math libarary to add squaring function
+
+import math 
 
 def add(num1, num2): # addition
     return num1 + num2
@@ -32,6 +35,15 @@ def multiply(num1,num2): # multiplication
 
 def divide(num1,num2): #division
     return num1 / num2 
+
+def square_root(num3): # square root of number 
+    return math.sqrt(num3)
+
+def convert_to_rad(num1): # convertomg from degrees to radians 
+    return math.cos(math.radians(num1))
+
+def exponent(num1,num2):
+    return math.pow(num1,num2)
 
 
 # we have to ask user input now 
@@ -50,6 +62,9 @@ while True:
         print("2. Subtract:" + "-")
         print("3. Multiply:" + "*")
         print("4. Divide:" + "/")
+        print("5. Squaring")
+        print("6. Convert to radians")
+        print("7. Exponent:" + "^")
         choices = float(input("Please enter choice:"))
     elif use_calc == "no":
         break
@@ -60,6 +75,7 @@ while True:
         if choices in (1, 2, 3, 4):
             num1= float(input("Enter first %s:"%("number")))
             num2= float(input("Enter second %s:"%("number")))
+
     except ValueError:
         print("Invalid %s entered please enter again:"%("number"))
         continue
@@ -71,6 +87,13 @@ while True:
         print(num1, "-", num2, "=", sub(num1,num2))
     elif choices == 3 :
         print(num1, "*", num2, "=", multiply(num1,num2))
+
+    elif choices == 5 :
+        try:
+            num3= float(input("Enter %s to be squared:"%("number")))
+            print(square_root(num3)) #squaring  number
+        except ValueError:
+            print("Negeative number cant be squared")
         
     elif choices == 4 : 
         try:
@@ -78,6 +101,24 @@ while True:
         except ZeroDivisionError: # we use exception so that error isnt thrown when divided by zero 
             print("Cannot divide by %s" %("zero"))
             continue
+
+    elif choices == 6 :
+        result= float(input("Enter value to convert to %s:"%("radians")))
+        angle=convert_to_rad(result)
+        print(angle)
+
+    elif choices == 7:
+        user_num1= float(input("Enter number1 to get %s:"%("exponent")))
+        user_num2= float(input("Enter number2 to get %s: "%("exponent")))
+        exp= exponent(user_num1,user_num2)
+        print(exp)
+
+
+    
+        
+
+
+        
 
 
     
