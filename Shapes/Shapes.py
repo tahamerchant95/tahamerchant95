@@ -1,13 +1,15 @@
+from math import pi 
+
 class Circle(): # creating a Circle class object 
     def __init__(self, radius):
         self.radius = radius
         
 
     def area(self):
-        return 3.142 * self.radius * self.radius
+        return pi * self.radius * self.radius
     
     def perimeter(self):
-        return 2 * 3.142 * self.radius
+        return 2 * pi * self.radius
 
 class Rectangle(): #creating reactangle object 
     def __init__(self, height, width):
@@ -38,8 +40,15 @@ class Triangle(): # creating traingle object
     
 
 
+class Sphere(): #creating sphere object 
+    def __init__(self, radius):
+        self.radius= radius 
 
-
-
-
+    def surface_area(self):
+        return 4 * pi * self.radius**2
     
+    def volume(self):
+        return ((4/3) * (pi * self.radius**3))
+
+
+
