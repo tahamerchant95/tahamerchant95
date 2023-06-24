@@ -2,7 +2,7 @@ secret_word = ("python") # stored a word in our variable, this remains constant
 
 turns = 5 # maximum number of turns allowed 
 
-wrong_guesses= 0 # currently wrong guesses are zero 
+wrong_guesses= [] # currently wrong guesses are zero 
 
 used_letters= [] # initialized an empty list 
 
@@ -17,15 +17,13 @@ while turns > 0 and dash_letter != secret_word:
     guess= guess.lower()
 
     while guess in used_letters:
-        used_letters.append(guess)
         print("Youve already used this letter:\t", guess)
         guess= input("Guess again:\t")
         guess=guess.lower()
-    
     used_letters.append(guess)
 
     if guess in secret_word:
-        print("Correct guess:",secret_word)
+        print("Correct guess:", guess)
         new =""
 
         for letters in range(len(secret_word)):
@@ -35,15 +33,17 @@ while turns > 0 and dash_letter != secret_word:
                 new = new + dash_letter[letters]
 
         dash_letter = new
-
-    if guess not in secret_word:
-        print("\nWrong guess entered:")
+    
+    elif guess not in secret_word:
+        print("\nletters guessed currently:\t", dash_letter)
+        guess=input("\nincorrect guess, please enter again:")
+        guess=guess.lower()
         turns = turns - 1 
         print("\nTurns remaining:", turns)
+    else:
+        continue
 
-        if turns == 0:
-            print("Youve ran out of turns, \nthe secret word is:", secret_word)
-        else:
-            print("\n youve guessed the correct word:")
-
-
+if turns == 0:
+    print("Youve ran out of turns, \nthe secret word is:", secret_word)
+else:
+    print("\nyouve guessed the correct word:", secret_word)
