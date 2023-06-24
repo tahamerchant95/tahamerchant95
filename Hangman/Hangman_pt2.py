@@ -17,11 +17,9 @@ while turns > 0 and dash_letter != secret_word:
     guess= guess.lower()
 
     if len(guess) != 1: # user enters single letter at a time 
-        print("\nEnter single letter at a time:")
+        print("\nEnter single letter at a time:", guess)
     elif guess not in 'abcdefghijklmnopqrstuvwxyz': # user needs to only enter letters 
-        print("\nenter only letter:")
-    else:
-        pass
+        print("\nenter only letter:", guess)
 
     while guess in used_letters:
         print("Youve already used this letter:\t", guess)
@@ -31,17 +29,19 @@ while turns > 0 and dash_letter != secret_word:
 
     if guess in secret_word:
         print("Correct guess:", guess)
-        new =""
+        correct_letters =""
 
         for letters in range(len(secret_word)):
             if guess == secret_word[letters]:
-                new = new + guess
+                correct_letters = correct_letters + guess
             else:
-                new = new + dash_letter[letters]
-        dash_letter= new 
+                correct_letters = correct_letters + dash_letter[letters]
+        dash_letter= correct_letters
     elif guess not in secret_word:
         print("\nincorrect guess:", guess)
         wrong_guesses.append(guess)
+        turns = turns - 1 
+        print("\nremaining number of turns are:", turns)
     else:
         continue
     '''
@@ -58,6 +58,6 @@ while turns > 0 and dash_letter != secret_word:
         continue
 '''
 if turns == 0:
-    print("\nYouve ran out of turns, \nthe secret word is:", secret_word)
+    print("\nYouve ran out of turns \nthe secret word is:", secret_word)
 else:
     print("\nyouve guessed the correct word:", secret_word)
