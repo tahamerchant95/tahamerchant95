@@ -36,13 +36,14 @@ while turns > 0 and dash_letter != secret_word:
         for letters in range(len(secret_word)):
             if guess == secret_word[letters]:
                 new = new + guess
-            elif guess not in secret_word:
-                print("\nincorrect guess")
-                wrong_guesses.append(guess)
             else:
                 new = new + dash_letter[letters]
-
-        dash_letter = new
+        dash_letter= new 
+    elif guess not in secret_word:
+        print("\nincorrect guess:", guess)
+        wrong_guesses.append(guess)
+    else:
+        continue
     '''
     elif guess not in secret_word:
         print("\nletters guessed currently:\t", dash_letter)
