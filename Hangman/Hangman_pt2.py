@@ -16,6 +16,13 @@ while turns > 0 and dash_letter != secret_word:
     guess= input("Enter guess letter:\t")
     guess= guess.lower()
 
+    if len(guess) != 1: # user enters single letter at a time 
+        print("\nEnter single letter at a time:")
+    elif guess not in 'abcdefghijklmnopqrstuvwxyz': # user needs to only enter letters 
+        print("\nenter only letter:")
+    else:
+        continue
+
     while guess in used_letters:
         print("Youve already used this letter:\t", guess)
         guess= input("Guess again:\t")
