@@ -15,6 +15,7 @@ while turns > 0 and dash_letter != secret_word:
     guess= guess.lower()
 
     while guess in used_letters:
+        used_letters.append(guess)
         print("Youve already used this letter:\t", guess)
         guess= input("Guess again:\t")
         guess=guess.lower()
@@ -23,7 +24,6 @@ while turns > 0 and dash_letter != secret_word:
 
     if guess in secret_word:
         print("Correct guess:",secret_word)
-
         new =""
 
         for i in range(len(secret_word)):
@@ -33,9 +33,6 @@ while turns > 0 and dash_letter != secret_word:
                 new = new + dash_letter[i]
 
         dash_letter = new
-    
-    else:
-        print("guess isnt in the word")
 
     if guess not in secret_word:
         print("\nWrong guess entered:")
@@ -45,6 +42,6 @@ while turns > 0 and dash_letter != secret_word:
         if turns == 0:
             print("Youve ran out of turns, \nthe secret word is:", secret_word)
         else:
-            print("\n youve guessed the correct word:", secret_word)
+            print("\n youve guessed the correct word:")
 
 
