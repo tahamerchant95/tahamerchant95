@@ -20,10 +20,6 @@ import random
 
 import time 
 
-def main():
-    pass
-
-
 def display_board(board): # will first try to draw our board
     print(board[7] + '|' + board[8] + '|' + board[9])
     print('-----')
@@ -75,7 +71,7 @@ def players_moves(board): # the position that user needs to enter on the board
     while position not in '1,2,3,4,5,6,7,8,9'.split() or not free_space(board, int(position)): # casted position to integer value
         print("\nyour next move from (1-9)")
         position=input()
-    return position
+    return int(position)
 
 def first_player():
     choice= random.randint(0,1)
@@ -86,8 +82,28 @@ def first_player():
         return 'Player2'
     
 
+while True:
+    rst_board=[' '] * 10 
+    player_character= user_character()
+    turn= first_player()
+    print("First player will be " + turn + " who will go first")
+    game_play= True 
 
-the_board= [' '] * 10 # this will indicate that spaces are currently empty
-display_board(the_board)
+    while game_play:
+        if turn == 'Player1':
+            display_board(rst_board)
+            move= players_moves(rst_board)
+            moves(rst_board,player_character, move)
 
-
+            if is_Winner(rst_board,player_character):
+                display_board(rst_board)
+                move= players_moves(rst_board)
+                print("\n You have won the game!")
+                game_play=False
+            else:
+                if full_board(rst_board):
+                    display_board(rst_board)
+                    print("\n Game is tied")
+                    break
+                else:
+                    turn='Player2'
