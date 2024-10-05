@@ -190,6 +190,17 @@ n = float(3) #casting float value
 print(n)
 
 
+h = "This is a random string" #strings in python represent unicode characters 
+print(h[1]) 
+
+for g in "Melon": #for loop going through all characters in strings 
+    print(g)
+
+print(len(h)) #printing number of letters in variable h (length)
+
+
+
+
 
 
 
