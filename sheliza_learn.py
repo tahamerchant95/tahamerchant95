@@ -200,17 +200,32 @@ print(len(h)) #printing number of letters in variable h (length)
 
 
 
+txt = "Python is an \"easy to learn\" programming language" #insert double quotes inside a string 
+print(txt)
 
+txt2 = "an example of using \\ backslash"
+print(txt2)
 
+txt3 = "Hello\rSheliza" #carriage return example
+print(txt3)
 
+txt4 = "Hello \b\rSheliza you are the \bbest" #example of using backspace and carriage return
+print(txt4)
 
+#below are some examples of string methods 
 
-
-
-
-
-
-
+print(txt2.capitalize())
+print(txt.casefold())
+print(txt2.center(1))
+print(txt.count('a'))
+print(txt4.encode())
+print(txt4.endswith("best"))
+print(txt4.expandtabs())
+print(txt.find("Python"))
+print(txt.upper())
+print(txt.title())
+print(txt.splitlines()) 
+print(txt.startswith("P"))
 
 
 
