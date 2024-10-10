@@ -78,7 +78,7 @@ print(os.listdir()) #checking whether file has been moved
 # use pip install send2trash 
 
 
-import send2trash
+#import send2trash
 
 #send2trash.send2trash('practice.txt') # will remove the file 
 
