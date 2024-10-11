@@ -227,6 +227,74 @@ print(txt.title())
 print(txt.splitlines()) 
 print(txt.startswith("P"))
 
+x = "Taha Sheliza"
+txt= x.strip() #returns string without any whitespace at beggining or end of line 
+print(txt)
+
+txt2= x.replace("T", "S") #replace specific value with something else 
+print(txt2)
+
+print(11 > 9) #will return boolean value (True or False)
+print(9 > 11)
+print( 11 == 9 )
+
+a = 9
+b = 7 
+
+if b > a:
+    print("b is greater than a".upper()) #adding a condtional loop to check what boolean value we get 
+else:
+    print("b is not greater than a".upper())
+
+
+print(bool("Hello")) #evaluating value using bool function 
+print(bool(12))
+
+
+x = "Hello"
+y = 1
+
+print(bool(x))
+print(bool(y))
+
+#any string is true, except empty strings
+#any integer is true, except the value 0 
+#any list, tuple, set is true except empty 
+#value none is false
+
+class test_class(): #this is an example class
+    def __len__(self): #this is a function 
+        return 1 #returning 1 as value 
+    
+test = test_class() #object made from class
+print(bool(test))
+
+
+def my_funct(): #creating function that can return bool value
+    return False
+
+if my_funct():
+    print("Yes") #if funtion returns YES will print true
+else:
+    print("NO") #if function returns NO will print False 
+
+obj1 = my_funct()
+print(obj1)
+
+X = 100 
+print(isinstance(X, int)) #builtin function returning a boolean value to determine data type of object 
+
+y = "Sheliza"
+print(isinstance(y , str)) #checking if datatype is string
+
+z = 3.5
+print(isinstance(y, float)) #checking if datatype is float 
+
+
+
+
+
+
 
 
 
