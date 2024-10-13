@@ -290,6 +290,127 @@ print(isinstance(y , str)) #checking if datatype is string
 z = 3.5
 print(isinstance(y, float)) #checking if datatype is float 
 
+j = 5 +6j 
+print(isinstance(j , complex)) #checking if datatype is complex 
+
+#arthimetic operators (+,-,/,*, %, ** , //)
+#Assignment operators (+=, -= , *= , /= , &=  , )
+#Comparison operators(<, > , == < != , >= , <=  )
+#logical operators (and  , or , not)
+#Identity operators (is, isnot) used to compare objects, but not check for equality 
+#Membership Operators (in , not in), checks if sequence is present
+#Bitwise operators (& , | , ~ , ^ M , << , >> ) compare binary numbers
+
+K = 2
+K += 3 #SAME AS K = K + 3
+K -= 3 #SAME AS K = k - 3
+K *= 3 #SAME AS K = K * 3
+K /= 3 #SAME AS K = K / 3 
+#K &= 3 #SAME AS K = K & 3
+print(K)
+print(x:=3) #SAME AS assigning x = 3 and printing ouput 
+
+
+
+l = 10 
+
+def my_func2():
+    if l > 11 and l < 8 : #AND function is used where all conditions are met 
+        return True
+    else:
+        return False
+    
+print(my_func2())
+
+def my_func3():
+    if l > 11 or l < 11: #OR is used when only one condition is met to be true 
+        return True
+    else:
+        return False
+print(my_func3())
+
+
+def myfunc4():
+    if not l > 11 or l < 11: #since one of the conditions is true adding the NOT operator will result in a reverse result 
+        return True
+    else:
+        return False
+    
+print(myfunc4()) 
+
+
+my_list1 = ["Apple", "cherry"]
+my_list2 = ["Apple", "cherry"]
+my_list3 = my_list1
+my_list2 = my_list1
+
+print(my_list3 is my_list1) #returns true if both are the same object, at same memory location, not used to compare objects
+print(my_list3 is my_list2) #returns false since both are not the same object
+
+
+
+
+
+print("cherry" in my_list1) #checks if value is included in sequence of my_list1 
+print("banana" not in my_list1) #since the value banana is not our list, it will return true
+print(my_list1 is not my_list2) #checks if both variables have the same values 
+
+
+
+print(1&2)
+
+
+print((1+1) * (2 + 2)) #operatoor precedence, also known as BODMAS that we used to do in mathematics
+
+print(100 - 2 ** 2) #exponent has higher precedence so will be calculated first
+
+print(100 + ~3)
+
+print(100 % 2) #calculate the remainder, prints remainder value also known as modulus 
+
+print(100 // 2) #calculate the floor devision value 
+
+
+print(100 / 2 ) #calulates division and prints float value 
+
+
+#Python List 
+#list used to store multiple values in single variable 
+#ordered, changeable, and allow duplicate values 
+#have indexed values 
+#by ordering means, if want to add new item in the list, the item will be appended at the end of the list
+#can change ,add, remove items 
+
+example_list = ["Apple", "Apple", "Mango" , "Cherry"] #duplicate values
+print(example_list)
+print(len(example_list)) #printing  length of list 
+
+example_list.append(12) #adding integer value to end of list 
+example_list.append(13)
+print(example_list)
+
+print(type(example_list))
+
+
+example2_list = list(("Guava" , "Peach" , 14 , 19.0)) #using list constructor to create list 
+print(example2_list)
+
+
+print(example_list[2])#accessing item from index 2 of list, since list have indexed values 
+
+print(example_list[-1]) #reverse indexing, accessing the last item 
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 

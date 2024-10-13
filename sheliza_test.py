@@ -66,9 +66,126 @@ print(h_var)
 g_var = complex(f)
 print(g_var)
 
+
+
+
 #11/10/2024
 
+myVar=10
+my_var=15
+My_Var=20
+
+myVar=int(10)
+
+myVar=float(10)
+print(myVar)
+
+a= "test"
+b= "example"
+
+print(a+b)
+print(a,b)
+
+print(a + '\n' + b)
+
+print(a + '\t' +  b)
+
+a,b,c =1,2,3
+print(b)
 
 
+#list []
+#tuple
+#dictionary, {Key:Value}
 
+"""
+my_first_dict = {"Python": 5.5 , "Java": 7.5} #dictionary Values 
+print(my_first_dict)
+print(my_first_dict.keys())
+print(my_first_dict.values())
+print(my_first_dict["Java"])
+
+"""
+
+my_first_list= ["Banana", "Mango", "Orange"] #creating list 
+x , y , z = my_first_list #unpacking items 
+print(y)
+
+d = "sheliza and taha have their \"Nikkah\"" #adding double quotes inside a string value 
+e = "SHELIZA and taha \"Love\" each other"
+print(len(d)) #printing number of letters in string 
+print(d.capitalize())
+print(d.upper())
+print(e.lower())
+print(e.startswith("sheliza"))
+print(e.endswith("other"))
+print(e.find("other"))
+print(e.title())
+
+print(d.splitlines())
+print(d.strip())
+
+
+#13/10/2024
+
+e= "my love is \"taha\" merchant" 
+print(e)
+print(len(e))
+
+print(e.upper())
+print(e.title())
+print(e.find("taha"))
+print(e.capitalize())
+print(e.startswith("n"))
+
+
+my_dict= {"letter" : 7}
+print(my_dict)
+print(my_dict.keys())
+print(my_dict.values())
+
+
+print(10 > 9)
+print(9 > 10)
+
+high = 10 
+low = 11 
+
+print(high > low)
+print(low > high)
+
+if high > low :
+    print("True")
+else:
+    print("False")
+
+print(bool(2)) #using bool function to evaulate value 
+print(bool("Taha"))
+print(bool(3.5))
+print(bool(""))
+print(bool(0))
+
+p = 5.6
+print(isinstance(p, int)) #using isinstance method to get boolean value 
+
+
+k = 3
+k += 3
+k -= 3
+k /= 3
+print(k)
+
+print(z := 3)
+
+my_list1 = ["Apple" , "Cherry" , "Mango"]
+my_list2 = ["Apple" , "Cherry" , "Mango"]
+my_list1 = my_list2
+my_list2.append("Mango")
+my_list2.append("Guava")
+print(my_list2)
+print(my_list1 is my_list2)
+
+print("Cherry" in my_list1 )
+print("cherry" not in my_list1)
+print(my_list1 is not my_list2)
 
